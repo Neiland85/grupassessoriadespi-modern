@@ -1,0 +1,18 @@
+reviewInstructions:
+  - pathPattern: "**/*.ts,**/*.tsx"
+    instructions: |
+      - Usar componentes funcionales y hooks en lugar de clases.
+      - Separar lógica de presentación y negocio.
+      - Aplicar tipado estricto con TypeScript. Evitar `any`.
+      - Validar que no haya imports sin usar.
+      - Seguir convenciones de nomenclatura y estilo definidas en el proyecto.
+      - Mantener las carpetas organizadas por dominio o funcionalidad.
+      - Comentar funciones complejas para facilitar la comprensión del equipo.
+      - Evitar duplicación de lógica entre componentes.
+      - Limitar los efectos secundarios en `useEffect`.
+      - Reutilizar componentes y hooks donde sea posible.
+      - Usar `env` y `secrets` para claves sensibles, no hardcodearlas.
+      - Mantener la accesibilidad (`aria-label`, roles, etc.) en componentes visuales.
+      - Usar `zod`, `yup` u otra librería para validación si hay formularios o entrada de datos.
+      - Evitar lógica condicional innecesariamente compleja dentro del JSX.
+
