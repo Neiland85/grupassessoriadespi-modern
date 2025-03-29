@@ -1,0 +1,14 @@
+reviewInstructions:
+  - pathPattern: "**/*.ts"
+    instructions: |
+      - Mantener código limpio y modular en los controladores y servicios.
+      - Usar clases y decoradores si se usa un framework como NestJS.
+      - Evitar lógica de negocio compleja en las rutas.
+      - Aplicar validación estricta con Zod, Joi o similares.
+      - Manejar errores con clases de excepción personalizadas.
+      - Evitar funciones con más de 40 líneas o demasiadas responsabilidades.
+      - Usar tipado explícito en todo momento. Nada de `any`.
+      - Organizar el código por capas: routes, controllers, services, models.
+      - Separar lógica de acceso a base de datos de la lógica de aplicación.
+      - Documentar funciones públicas y servicios con comentarios útiles.
+
