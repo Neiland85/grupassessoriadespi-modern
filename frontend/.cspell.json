@@ -1,0 +1,40 @@
+{
+  "version": "0.2",
+  "language": "en,es",
+  "ignorePaths": [
+    "node_modules",
+    ".next",
+    "build",
+    "**/*.pack.gz",
+    "pnpm-lock.yaml",
+    ".env*"
+  ],
+  "words": [
+    "Assessoria",
+    "CookieConsent",
+    "DefaultSeo",
+    "Despí",
+    "Grup",
+    "SEO",
+    "Weglot",
+    "asesoría",
+    "cargada",
+    "cargado",
+    "Consentimiento",
+    "Contenido",
+    "correctamente",
+    "dinámicamente",
+    "Encuentra",
+    "entorno",
+    "está",
+    "hogar",
+    "inmobiliarios",
+    "pnpm",
+    "seguridad",
+    "seguros",
+    "Servicios",
+    "tsx",
+    "Validación"
+  ]
+}
+
