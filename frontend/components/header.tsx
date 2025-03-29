@@ -26,6 +26,7 @@ export function Header() {
           <span className="hidden font-bold sm:inline-block">Grup Assessoria Despí</span>
         </Link>
 
+        {/* MENÚ DESKTOP */}
         <div className="hidden md:flex">
           <NavigationMenu>
             <NavigationMenuList>
@@ -34,6 +35,7 @@ export function Header() {
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Inicio</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <NavigationMenuTrigger>Propiedades</NavigationMenuTrigger>
                 <NavigationMenuContent>
@@ -61,16 +63,19 @@ export function Header() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <Link href="/servicios" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Servicios</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <Link href="/nosotros" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Nosotros</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
+
               <NavigationMenuItem>
                 <Link href="/contacto" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Contacto</NavigationMenuLink>
@@ -80,6 +85,7 @@ export function Header() {
           </NavigationMenu>
         </div>
 
+        {/* ACCIONES Y MENÚ MOBILE */}
         <div className="flex items-center space-x-4">
           <Link href="/favoritos">
             <Button variant="ghost" size="icon">
@@ -96,22 +102,12 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="right">
-              <nav className="flex flex-col space-y-4">
-                <Link href="/" className="text-sm font-medium">
-                  Inicio
-                </Link>
-                <Link href="/propiedades" className="text-sm font-medium">
-                  Propiedades
-                </Link>
-                <Link href="/servicios" className="text-sm font-medium">
-                  Servicios
-                </Link>
-                <Link href="/nosotros" className="text-sm font-medium">
-                  Nosotros
-                </Link>
-                <Link href="/contacto" className="text-sm font-medium">
-                  Contacto
-                </Link>
+              <nav className="flex flex-col space-y-4 mt-6">
+                <Link href="/" className="text-sm font-medium">Inicio</Link>
+                <Link href="/propiedades" className="text-sm font-medium">Propiedades</Link>
+                <Link href="/servicios" className="text-sm font-medium">Servicios</Link>
+                <Link href="/nosotros" className="text-sm font-medium">Nosotros</Link>
+                <Link href="/contacto" className="text-sm font-medium">Contacto</Link>
               </nav>
             </SheetContent>
           </Sheet>
