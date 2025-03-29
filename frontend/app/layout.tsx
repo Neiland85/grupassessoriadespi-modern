@@ -3,8 +3,6 @@ import "./globals.css"
 import { CookieConsent } from "@/components/cookie-consent"
 import type { Metadata } from "next"
 import type React from "react"
-
-// SEO
 import { DefaultSeo } from "next-seo"
 import SEO from "../next-seo.config"
 
@@ -12,23 +10,28 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
   title: "Grup Assessoria Despí - Tu Hogar Ideal",
-  description: "Encuentra tu hogar ideal con Grup Assessoria Despí. Servicios inmobiliarios, asesoría y seguros.",
-  generator: "v0.dev"
+  description:
+    "Encuentra tu hogar ideal con Grup Assessoria Despí. Servicios inmobiliarios, asesoría y seguros.",
+  generator: "v0.dev",
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  // ✅ Validación de que la variable de entorno está correctamente cargada
+  console.log("✅ Weglot key loaded:", process.env.NEXT_PUBLIC_WEGLOT_API_KEY)
+
   return (
     <html lang="es">
       <head>
-        {/* Weglot script para multilingüe */}
+        {/* ✅ Weglot script cargado dinámicamente con seguridad */}
         <script
-          dangerouslySetInnerHTML={{
+          // rome-ignore lint/security/noDangerouslySetInnerHtml: <explanation>
+dangerouslySetInnerHTML={{
             __html: `
-              window.Weglot = { api_key: 'wg_e39ddf9cdccad4fd0095692650d80e649' };
+              window.Weglot = { api_key: '${process.env.NEXT_PUBLIC_WEGLOT_API_KEY}' };
             `,
           }}
         />
-        <script src="https://cdn.weglot.com/weglot.min.js" async></script>
+        <script src="https://cdn.weglot.com/weglot.min.js" async />
       </head>
       <body className={inter.className}>
         {/* SEO global */}
